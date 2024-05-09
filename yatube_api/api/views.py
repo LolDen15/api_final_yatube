@@ -57,4 +57,3 @@ class FollowViewset(CreateModelMixin, ListModelMixin, viewsets.GenericViewSet):
 
     def get_queryset(self):
         return self.request.user.subscriptions.all()
-
