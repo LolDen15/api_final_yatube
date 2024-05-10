@@ -1,3 +1,11 @@
+### Технологии
+
+![Python](https://img.shields.io/badge/python-3.9-green?logo=python)
+![Django](https://img.shields.io/badge/Django-3.2.16-brightgreen?logo=django&labelColor=grey&color=blue)
+![Djoser](https://img.shields.io/badge/Djoser-brightgreen?color=blue)
+![JWT](https://img.shields.io/badge/JWT-brightgreen?color=blue)
+
+
 ### Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
@@ -70,3 +78,7 @@ http://127.0.0.1:8000/api/v1/posts/{номер_поста}/
 ```
 http://127.0.0.1:8000/redoc/
 ```
+
+Автор
+
+[Майоров Денис](https://github.com/LolDen15)

@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.db.models import F, Q
 
 User = get_user_model()
 
@@ -36,6 +37,9 @@ class Post(models.Model):
         null=True
     )
 
+    class Meta:
+        ordering = ('author',)
+
     def __str__(self):
         return self.text[:MAX_LENGHT_TITILE]
 
@@ -67,5 +71,9 @@ class Follow(models.Model):
             models.UniqueConstraint(
                 fields=('user', 'following'),
                 name='unique_follow'
+            ),
+            models.CheckConstraint(
+                check=~Q(user=F('following')),
+                name='prevent_self_follow'
             ),
         )
